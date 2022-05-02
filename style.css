@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;800;900&display=swap');
+:root {
+    --primary-color: #00ffff;
+    --ora: #a09df7;
+    --white: #fff;
+    --black: #000;
+    counter-reset: checked-sum, unchecked-sum;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    background-color: var(--black);
+    margin: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+header {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+h1 {
+    padding: 5px 0;
+    font-size: 1.7rem;
+}
+
+textarea {
+    background-color: var(--ora);
+    padding: 10px;
+    font-size: 0.8em;
+    font-family: inherit;
+    border: solid 2px #f0f0f0;
+    border-radius: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+textarea:focus {
+    border: solid 2px #f0f0f0;
+    box-shadow: 0 0 5px #f0f0f0;
+}
+
+label {
+    display: block;
+    width: 100%;
+    color: var(--white);
+}
+
+div {
+    color: var(--white);
+}
+
+input {
+    color: var(--white);
+}
+
+#stat {
+    color: var(--primary-color);
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    counter-increment: unchecked-sum;
+    color: var(--white);
+}
+
+input[type="checkbox"]:checked {
+    counter-increment: checked-sum;
+    color: var(--white);
+}
+
+.totalUnChecked::after {
+    content: counter(unchecked-sum);
+    color: var(--white);
+}
+
+.totalChecked::after {
+    content: counter(checked-sum);
+    color: var(--white);
+}
+
+
+/* grid code */
+
+.grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-row-gap: 6px;
+}
+
+.total {
+    grid-row: 1;
+    grid-column: 1 / 3;
+}
+
+input[type="checkbox"]::after {
+    display: block;
+    content: "";
+    width: 13px;
+    height: 13px;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+    background-color: var(--ora);
+}
+
+.grid {
+    justify-content: left;
+    max-width: 750px;
+    margin: auto;
+    padding: 0px 0;
+}
+
+.total {
+    margin: 5px 0 10px 0;
+    width: 135px;
+}
+
+.total span {
+    background-color: var(--ora);
+    color: var(--black);
+    display: inline-block;
+    margin-bottom: 3px;
+    padding: 3px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Everything Must Count.</h1>
+        </header>
+        <h3>What I've done?</h3>
+        <div class=grid>
+            <input type=checkbox>Cup of coffee
+            <input type=checkbox>Procrastinated
+            <input type=checkbox>Reviewed assignment
+            <input type=checkbox>Procrastinated again
+            <input type=checkbox>Staring contest with assignment
+            <input type=checkbox>Began.. Fell asleep
+            <div class=total>
+                <span class=totalChecked> Total checked: </span>
+                <span class=totalUnChecked> Total Unchecked: </span>
+            </div>
+        </div>
+        <br>
+        <h3>Word Counter</h3>
+        <div class="form">
+            <label for="text">Well this is what I have so far:</label>
+            <textarea id="text" rows="10" cols="60"></textarea>
+        </div>
+        <div id="stat">You've written 0 words and 0 characters.</div>
+    </div>
+    <script src="js/counter.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
